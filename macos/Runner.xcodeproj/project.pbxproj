@@ -1,0 +1,705 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		CHRR9Q35FZHGFKORWP7QCMXU /* Flutter Assemble */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = YZE08O288710UHK2BSKCORCO /* Build configuration list for PBXAggregateTarget "Flutter Assemble" */;
+			buildPhases = (
+				KGI9RGIVVMSQRJ551PCZ92PQ /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Flutter Assemble";
+			productName = FLX;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		D6P4M1HT72O7QXO79TSYGT4G /* RunnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = RGSHU9GPKD4Z7UB905YAGGOQ /* RunnerTests.swift */; };
+		VKK31S5D7QLRXWDQB5ENOW9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EWRF2IPPHLRC1LDWF42YB5PR /* AppDelegate.swift */; };
+		2I6U22L9XGFYX1KVY197JSZO /* MainFlutterWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4Z6ZS8WP1850VU52RV7P73CO /* MainFlutterWindow.swift */; };
+		GW8WSW90AHPHPVSZ37ZWDC5I /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A4AT2G1M57FGQ55NI1WCKSH /* MainMenu.xib */; };
+		SETNDWWNKL9ZSXYL63R6X75J /* GeneratedPluginRegistrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = YFQ6FLT9E9UV1PR9U64R0MD8 /* GeneratedPluginRegistrant.swift */; };
+		KCRP7AFZ7FTTI03Q4FCNIMCU /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = U91VBC0MN69OZC3NTF6Y9L37 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E28BSTUVEXI2ZCNS6JOUMS4G /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = Z7IQFSJ2P196DWX7F5JGYAXP /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AGSRCFVQ9B0TLBVJKK9H14SJ;
+			remoteInfo = Runner;
+		};
+		DFF3SUUFK9W5I80MZKT0PZHU /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = Z7IQFSJ2P196DWX7F5JGYAXP /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CHRR9Q35FZHGFKORWP7QCMXU;
+			remoteInfo = FLX;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		P388D325RPNR77SINEGXCBBL /* Bundle Framework */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Bundle Framework";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		YVX8HQ8RF467H1RMQPIUD4NL /* AppInfo.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AppInfo.xcconfig; sourceTree = "<group>"; };
+		JFY2VUFZCS48RDQ2BSQP4YDG /* RunnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		SX6MK2W0QQQJCNLG6TTVLUI3 /* Flutter-Generated.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Flutter-Generated.xcconfig"; path = "ephemeral/Flutter-Generated.xcconfig"; sourceTree = "<group>"; };
+		4Z6ZS8WP1850VU52RV7P73CO /* MainFlutterWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlutterWindow.swift; sourceTree = "<group>"; };
+		52ZC8TY6FSIXBKKFWTYRY9LY /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		U91VBC0MN69OZC3NTF6Y9L37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Runner/Assets.xcassets; sourceTree = "<group>"; };
+		3ZF4QT8AE0R41017KZHTXN8K /* Flutter-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Flutter-Release.xcconfig"; sourceTree = "<group>"; };
+		CM9A9UGLNNTJIL7XD9621I2H /* DebugProfile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DebugProfile.entitlements; sourceTree = "<group>"; };
+		RGSHU9GPKD4Z7UB905YAGGOQ /* RunnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerTests.swift; sourceTree = "<group>"; };
+		EWRF2IPPHLRC1LDWF42YB5PR /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		S1NH9Y17XZLQQS583QVVFP03 /* Release.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Release.entitlements; sourceTree = "<group>"; };
+		5O2MF7L83L3NGBPI2DS3AM3H /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		YFQ6FLT9E9UV1PR9U64R0MD8 /* GeneratedPluginRegistrant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedPluginRegistrant.swift; sourceTree = "<group>"; };
+		4F1037FSBVBMCCA7CHZ8OCFH /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Runner/Info.plist; sourceTree = "<group>"; };
+		U8MR67TEQNU2Y8Q3I1QXUATK /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		FJSYE12A6ZV07N2RCKQ5XCYH /* xiangban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xiangban.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		KWT0CI40J0A0YYWUUIZGW1KY /* Flutter-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Flutter-Debug.xcconfig"; sourceTree = "<group>"; };
+		6CUW6BO2MMBET0P5X9I6KADQ /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5GSLZT3N9XY5ND19D5Q186O4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		KC0GIJTWK68Q6HYEUX3AEPPX /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		KK4DKH5L4K4AGSOPRSPWLAAL /* RunnerTests */ = {
+			isa = PBXGroup;
+			children = (
+				RGSHU9GPKD4Z7UB905YAGGOQ /* RunnerTests.swift */,
+			);
+			path = RunnerTests;
+			sourceTree = "<group>";
+		};
+		IM9DESYH2FSSTEPXCW9PI7OG /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				YVX8HQ8RF467H1RMQPIUD4NL /* AppInfo.xcconfig */,
+				U8MR67TEQNU2Y8Q3I1QXUATK /* Debug.xcconfig */,
+				52ZC8TY6FSIXBKKFWTYRY9LY /* Release.xcconfig */,
+				6CUW6BO2MMBET0P5X9I6KADQ /* Warnings.xcconfig */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		253BCD7UKJRQWAX64ANITB8Y = {
+			isa = PBXGroup;
+			children = (
+				KK4DKH5L4K4AGSOPRSPWLAAL /* RunnerTests */,
+				P8YE8MFU0KB215JRFSL0IPJ0 /* Flutter */,
+				HT6WNNMUT5DJCSOT632W6UFT /* Runner */,
+				RCJ3QX5GO0K8EH214NYB3NQC /* Products */,
+				4KT0QOLSV4N7FEITIHUAAIU9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		RCJ3QX5GO0K8EH214NYB3NQC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FJSYE12A6ZV07N2RCKQ5XCYH /* xiangban.app */,
+				JFY2VUFZCS48RDQ2BSQP4YDG /* RunnerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EMIQ8ZLMRLTINVJYTLGVV1E8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				U91VBC0MN69OZC3NTF6Y9L37 /* Assets.xcassets */,
+				9A4AT2G1M57FGQ55NI1WCKSH /* MainMenu.xib */,
+				4F1037FSBVBMCCA7CHZ8OCFH /* Info.plist */,
+			);
+			name = Resources;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		P8YE8MFU0KB215JRFSL0IPJ0 /* Flutter */ = {
+			isa = PBXGroup;
+			children = (
+				YFQ6FLT9E9UV1PR9U64R0MD8 /* GeneratedPluginRegistrant.swift */,
+				KWT0CI40J0A0YYWUUIZGW1KY /* Flutter-Debug.xcconfig */,
+				3ZF4QT8AE0R41017KZHTXN8K /* Flutter-Release.xcconfig */,
+				SX6MK2W0QQQJCNLG6TTVLUI3 /* Flutter-Generated.xcconfig */,
+			);
+			path = Flutter;
+			sourceTree = "<group>";
+		};
+		HT6WNNMUT5DJCSOT632W6UFT /* Runner */ = {
+			isa = PBXGroup;
+			children = (
+				EWRF2IPPHLRC1LDWF42YB5PR /* AppDelegate.swift */,
+				EMIQ8ZLMRLTINVJYTLGVV1E8 /* Resources */,
+				CM9A9UGLNNTJIL7XD9621I2H /* DebugProfile.entitlements */,
+				IM9DESYH2FSSTEPXCW9PI7OG /* Configs */,
+				4Z6ZS8WP1850VU52RV7P73CO /* MainFlutterWindow.swift */,
+				S1NH9Y17XZLQQS583QVVFP03 /* Release.entitlements */,
+			);
+			path = Runner;
+			sourceTree = "<group>";
+		};
+		4KT0QOLSV4N7FEITIHUAAIU9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5A5JP0LCHPA6AXUEYZGBNVHA /* RunnerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6UHWQ7QWNOXP60ICC7FKBGPE /* Build configuration list for PBXNativeTarget "RunnerTests" */;
+			buildPhases = (
+				Z0A9ES21C1K4VTQ71MXG579R /* Sources */,
+				5GSLZT3N9XY5ND19D5Q186O4 /* Frameworks */,
+				V2487RXL5KP9XQYEY1N7V2TK /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F0543I07GN8GPBAKCXL0DSD /* PBXTargetDependency */,
+			);
+			name = RunnerTests;
+			productName = RunnerTests;
+			productReference = JFY2VUFZCS48RDQ2BSQP4YDG /* RunnerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AGSRCFVQ9B0TLBVJKK9H14SJ /* Runner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = QBRPTAXEJQ0HBRPWGVC8DEN1 /* Build configuration list for PBXNativeTarget "Runner" */;
+			buildPhases = (
+				7QGL6D3U0NU69P6KRIQVKLDI /* Sources */,
+				KC0GIJTWK68Q6HYEUX3AEPPX /* Frameworks */,
+				FOZWQSTQBKG7NLZVMKJ5TEI7 /* Resources */,
+				P388D325RPNR77SINEGXCBBL /* Bundle Framework */,
+				7UYKVRJL53W9Y6L155LOH6U3 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FPE340EO8MFMOH5ZC9I60RWR /* PBXTargetDependency */,
+			);
+			name = Runner;
+			productName = Runner;
+			productReference = FJSYE12A6ZV07N2RCKQ5XCYH /* xiangban.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		Z7IQFSJ2P196DWX7F5JGYAXP /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 1510;
+				ORGANIZATIONNAME = "";
+				TargetAttributes = {
+					5A5JP0LCHPA6AXUEYZGBNVHA = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = AGSRCFVQ9B0TLBVJKK9H14SJ;
+					};
+					AGSRCFVQ9B0TLBVJKK9H14SJ = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1100;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					CHRR9Q35FZHGFKORWP7QCMXU = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 3QS4H3LU3BYW9ASDPHL1IN73 /* Build configuration list for PBXProject "Runner" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 253BCD7UKJRQWAX64ANITB8Y;
+			productRefGroup = RCJ3QX5GO0K8EH214NYB3NQC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AGSRCFVQ9B0TLBVJKK9H14SJ /* Runner */,
+				5A5JP0LCHPA6AXUEYZGBNVHA /* RunnerTests */,
+				CHRR9Q35FZHGFKORWP7QCMXU /* Flutter Assemble */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		V2487RXL5KP9XQYEY1N7V2TK /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FOZWQSTQBKG7NLZVMKJ5TEI7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				KCRP7AFZ7FTTI03Q4FCNIMCU /* Assets.xcassets in Resources */,
+				GW8WSW90AHPHPVSZ37ZWDC5I /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7UYKVRJL53W9Y6L155LOH6U3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"$PRODUCT_NAME.app\" > \"$PROJECT_DIR\"/Flutter/ephemeral/.app_filename && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/macos_assemble.sh embed\n";
+		};
+		KGI9RGIVVMSQRJ551PCZ92PQ /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				Flutter/ephemeral/FlutterInputs.xcfilelist,
+			);
+			inputPaths = (
+				Flutter/ephemeral/tripwire,
+			);
+			outputFileListPaths = (
+				Flutter/ephemeral/FlutterOutputs.xcfilelist,
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$FLUTTER_ROOT\"/packages/flutter_tools/bin/macos_assemble.sh && touch Flutter/ephemeral/tripwire";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		Z0A9ES21C1K4VTQ71MXG579R /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6P4M1HT72O7QXO79TSYGT4G /* RunnerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7QGL6D3U0NU69P6KRIQVKLDI /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2I6U22L9XGFYX1KVY197JSZO /* MainFlutterWindow.swift in Sources */,
+				VKK31S5D7QLRXWDQB5ENOW9B /* AppDelegate.swift in Sources */,
+				SETNDWWNKL9ZSXYL63R6X75J /* GeneratedPluginRegistrant.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2F0543I07GN8GPBAKCXL0DSD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AGSRCFVQ9B0TLBVJKK9H14SJ /* Runner */;
+			targetProxy = E28BSTUVEXI2ZCNS6JOUMS4G /* PBXContainerItemProxy */;
+		};
+		FPE340EO8MFMOH5ZC9I60RWR /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CHRR9Q35FZHGFKORWP7QCMXU /* Flutter Assemble */;
+			targetProxy = DFF3SUUFK9W5I80MZKT0PZHU /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9A4AT2G1M57FGQ55NI1WCKSH /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5O2MF7L83L3NGBPI2DS3AM3H /* Base */,
+			);
+			name = MainMenu.xib;
+			path = Runner;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B8LKOS6UTCR2UGDUNLQW4TNE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.xiangban.RunnerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/xiangban.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/xiangban";
+			};
+			name = Debug;
+		};
+		CRZ4RA0EMXOEAWPB31QYVBLU /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.xiangban.RunnerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/xiangban.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/xiangban";
+			};
+			name = Release;
+		};
+		GJRBZYVNG9NVXSDIZ2NODOJT /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.xiangban.RunnerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/xiangban.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/xiangban";
+			};
+			name = Profile;
+		};
+		6GPF0O988H5VCQY3CNVZK4IJ /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52ZC8TY6FSIXBKKFWTYRY9LY /* Release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Profile;
+		};
+		ACXOA60ZPC8UAMG3LWT15LIZ /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = YVX8HQ8RF467H1RMQPIUD4NL /* AppInfo.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Runner/DebugProfile.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Runner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Profile;
+		};
+		5LGO81W1IL1H9E5ZONQ65MXU /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Profile;
+		};
+		9OR7MYIXCH0T4RGAIOLCX2IC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = U8MR67TEQNU2Y8Q3I1QXUATK /* Debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5EVEI67SESUVCVDO55DPJGK1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52ZC8TY6FSIXBKKFWTYRY9LY /* Release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		TI33YV9P2KTAGDO4C8OO40YF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = YVX8HQ8RF467H1RMQPIUD4NL /* AppInfo.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Runner/DebugProfile.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Runner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7FQ0LPUM0QIISP0CO1677K7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = YVX8HQ8RF467H1RMQPIUD4NL /* AppInfo.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Runner/Release.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Runner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		JXO38MCH61EDOIQ45AULDKI2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5S9H7J0X27QGLU7OTRYB4QQ5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6UHWQ7QWNOXP60ICC7FKBGPE /* Build configuration list for PBXNativeTarget "RunnerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8LKOS6UTCR2UGDUNLQW4TNE /* Debug */,
+				CRZ4RA0EMXOEAWPB31QYVBLU /* Release */,
+				GJRBZYVNG9NVXSDIZ2NODOJT /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3QS4H3LU3BYW9ASDPHL1IN73 /* Build configuration list for PBXProject "Runner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9OR7MYIXCH0T4RGAIOLCX2IC /* Debug */,
+				5EVEI67SESUVCVDO55DPJGK1 /* Release */,
+				6GPF0O988H5VCQY3CNVZK4IJ /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		QBRPTAXEJQ0HBRPWGVC8DEN1 /* Build configuration list for PBXNativeTarget "Runner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				TI33YV9P2KTAGDO4C8OO40YF /* Debug */,
+				7FQ0LPUM0QIISP0CO1677K7A /* Release */,
+				ACXOA60ZPC8UAMG3LWT15LIZ /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		YZE08O288710UHK2BSKCORCO /* Build configuration list for PBXAggregateTarget "Flutter Assemble" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				JXO38MCH61EDOIQ45AULDKI2 /* Debug */,
+				5S9H7J0X27QGLU7OTRYB4QQ5 /* Release */,
+				5LGO81W1IL1H9E5ZONQ65MXU /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = Z7IQFSJ2P196DWX7F5JGYAXP /* Project object */;
+}

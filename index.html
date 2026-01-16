@@ -1,0 +1,522 @@
+{\rtf1\ansi\ansicpg936\cocoartf2865
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red70\green137\blue204;\red23\green24\blue24;\red140\green211\blue254;
+\red202\green202\blue202;\red109\green109\blue109;\red194\green126\blue101;\red109\green115\blue120;\red212\green212\blue212;
+\red246\green124\blue48;\red113\green192\blue131;}
+{\*\expandedcolortbl;;\cssrgb\c33725\c61176\c83922;\cssrgb\c11765\c12157\c12549;\cssrgb\c61176\c86275\c99608;
+\cssrgb\c83137\c83137\c83137;\cssrgb\c50196\c50196\c50196;\cssrgb\c80784\c56863\c47059;\cssrgb\c50196\c52549\c54510;\cssrgb\c86275\c86275\c86275;
+\cssrgb\c98039\c56471\c24314;\cssrgb\c50588\c78824\c58431;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 <!DOCTYPE\cf4 \strokec4  html\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb3 \strokec6 <\cf2 \strokec2 html\cf5 \strokec5  \cf4 \strokec4 lang\cf6 \strokec6 =\cf7 \strokec7 "zh-CN"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6 <\cf2 \strokec2 head\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3     \cf6 \strokec6 <\cf2 \strokec2 meta\cf5 \strokec5  \cf4 \strokec4 charset\cf6 \strokec6 =\cf7 \strokec7 "UTF-8"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 <\cf2 \strokec2 meta\cf5 \strokec5  \cf4 \strokec4 name\cf6 \strokec6 =\cf7 \strokec7 "viewport"\cf5 \strokec5  \cf4 \strokec4 content\cf6 \strokec6 =\cf7 \strokec7 "width=device-width, initial-scale=1.0"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 <\cf2 \strokec2 title\cf6 \strokec6 >\cf5 \strokec5 \uc0\u30456 \u20276  App - VitalFlow\cf6 \strokec6 </\cf2 \strokec2 title\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3     \cb1 \
+\cb3     \cf8 \strokec8 <!-- 1. \uc0\u24341 \u20837  React \u21644  Babel -->\cf5 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 <\cf2 \strokec2 script\cf5 \strokec5  \cf4 \strokec4 src\cf6 \strokec6 =\cf7 \strokec7 "https://unpkg.com/react@18/umd/react.development.js"\cf5 \strokec5  \cf4 \strokec4 crossorigin\cf6 \strokec6 ></\cf2 \strokec2 script\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 <\cf2 \strokec2 script\cf5 \strokec5  \cf4 \strokec4 src\cf6 \strokec6 =\cf7 \strokec7 "https://unpkg.com/react-dom@18/umd/react-dom.development.js"\cf5 \strokec5  \cf4 \strokec4 crossorigin\cf6 \strokec6 ></\cf2 \strokec2 script\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 <\cf2 \strokec2 script\cf5 \strokec5  \cf4 \strokec4 src\cf6 \strokec6 =\cf7 \strokec7 "https://unpkg.com/@babel/standalone/babel.min.js"\cf6 \strokec6 ></\cf2 \strokec2 script\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3     \cb1 \
+\cb3     \cf8 \strokec8 <!-- 2. \uc0\u24341 \u20837  Tailwind CSS -->\cf5 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 <\cf2 \strokec2 script\cf5 \strokec5  \cf4 \strokec4 src\cf6 \strokec6 =\cf7 \strokec7 "https://cdn.tailwindcss.com"\cf6 \strokec6 ></\cf2 \strokec2 script\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3     \cb1 \
+\cb3     \cf8 \strokec8 <!-- 3. \uc0\u37197 \u32622  Tailwind \u20027 \u39064 \u33394  -->\cf5 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 <\cf2 \strokec2 script\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3         tailwind\cf9 \strokec9 .\cf5 \strokec5 config \cf9 \strokec9 =\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             theme\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                 extend\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                     colors\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                         orange\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                             \cf10 \strokec10 50\cf9 \strokec9 :\cf5 \strokec5  \cf11 \strokec11 '#fff7ed'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                             \cf10 \strokec10 100\cf9 \strokec9 :\cf5 \strokec5  \cf11 \strokec11 '#ffedd5'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                             \cf10 \strokec10 500\cf9 \strokec9 :\cf5 \strokec5  \cf11 \strokec11 '#FF8C42'\cf9 \strokec9 ,\cf5 \strokec5  \cf8 \strokec8 // App \uc0\u20027 \u39064 \u27225 \u33394 \cf5 \cb1 \strokec5 \
+\cb3                             \cf10 \strokec10 600\cf9 \strokec9 :\cf5 \strokec5  \cf11 \strokec11 '#ea580c'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                         \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3                         red\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                             \cf10 \strokec10 500\cf9 \strokec9 :\cf5 \strokec5  \cf11 \strokec11 '#FF3B30'\cf9 \strokec9 ,\cf5 \strokec5  \cf8 \strokec8 // App \uc0\u20027 \u39064 \u32418 \u33394 \cf5 \cb1 \strokec5 \
+\cb3                             \cf10 \strokec10 600\cf9 \strokec9 :\cf5 \strokec5  \cf11 \strokec11 '#dc2626'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3                     \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3                     fontFamily\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                         sans\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 [\cf11 \strokec11 '-apple-system'\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 'BlinkMacSystemFont'\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 'Segoe UI'\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 'Roboto'\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 'Helvetica'\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 'Arial'\cf9 \strokec9 ,\cf5 \strokec5  \cf11 \strokec11 'sans-serif'\cf9 \strokec9 ],\cf5 \cb1 \strokec5 \
+\cb3                     \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3                     animation\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                         \cf11 \strokec11 'fade-in'\cf9 \strokec9 :\cf5 \strokec5  \cf11 \strokec11 'fadeIn 0.5s ease-out'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                         \cf11 \strokec11 'slide-up'\cf9 \strokec9 :\cf5 \strokec5  \cf11 \strokec11 'slideUp 0.6s ease-out'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                         \cf11 \strokec11 'dash'\cf9 \strokec9 :\cf5 \strokec5  \cf11 \strokec11 'dash 1.5s ease-out forwards'\cf9 \strokec9 ,\cf5 \cb1 \strokec5 \
+\cb3                     \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3                     keyframes\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                         fadeIn\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                             \cf11 \strokec11 '0%'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \strokec5  opacity\cf9 \strokec9 :\cf5 \strokec5  \cf11 \strokec11 '0'\cf5 \strokec5  \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3                             \cf11 \strokec11 '100%'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \strokec5  opacity\cf9 \strokec9 :\cf5 \strokec5  \cf11 \strokec11 '1'\cf5 \strokec5  \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3                         \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3                         slideUp\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                             \cf11 \strokec11 '0%'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \strokec5  transform\cf9 \strokec9 :\cf5 \strokec5  \cf11 \strokec11 'translateY(20px)'\cf9 \strokec9 ,\cf5 \strokec5  opacity\cf9 \strokec9 :\cf5 \strokec5  \cf11 \strokec11 '0'\cf5 \strokec5  \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3                             \cf11 \strokec11 '100%'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \strokec5  transform\cf9 \strokec9 :\cf5 \strokec5  \cf11 \strokec11 'translateY(0)'\cf9 \strokec9 ,\cf5 \strokec5  opacity\cf9 \strokec9 :\cf5 \strokec5  \cf11 \strokec11 '1'\cf5 \strokec5  \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3                         \cf9 \strokec9 \},\cf5 \cb1 \strokec5 \
+\cb3                         dash\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3                             \cf11 \strokec11 'to'\cf9 \strokec9 :\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \strokec5  strokeDashoffset\cf9 \strokec9 :\cf5 \strokec5  \cf11 \strokec11 '120'\cf5 \strokec5  \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3                         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3                     \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3                 \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3             \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 </\cf2 \strokec2 script\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\
+\cb3     \cf6 \strokec6 <\cf2 \strokec2 style\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3         \cf8 \strokec8 /* \uc0\u38544 \u34255 \u28378 \u21160 \u26465 \u20294 \u20801 \u35768 \u28378 \u21160  */\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 .no-scrollbar::-webkit-scrollbar\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 display:\cf5 \strokec5  \cf7 \strokec7 none\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 .no-scrollbar\cf5 \strokec5  \cf9 \strokec9 \{\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 -ms-overflow-style:\cf5 \strokec5  \cf7 \strokec7 none\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3             \cf4 \strokec4 scrollbar-width:\cf5 \strokec5  \cf7 \strokec7 none\cf9 \strokec9 ;\cf5 \cb1 \strokec5 \
+\cb3         \cf9 \strokec9 \}\cf5 \cb1 \strokec5 \
+\cb3     \cf6 \strokec6 </\cf2 \strokec2 style\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb3 \strokec6 </\cf2 \strokec2 head\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6 <\cf2 \strokec2 body\cf5 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf7 \strokec7 "bg-gray-100 flex items-center justify-center min-h-screen font-sans selection:bg-orange-500 selection:text-white"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3     \cf6 \strokec6 <\cf2 \strokec2 div\cf5 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf7 \strokec7 "root"\cf6 \strokec6 ></\cf2 \strokec2 div\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\
+\cb3     \cf6 \strokec6 <\cf2 \strokec2 script\cf5 \strokec5  \cf4 \strokec4 type\cf6 \strokec6 =\cf7 \strokec7 "text/babel"\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cb3         const \{ useState, useEffect \} = React;\cb1 \
+\
+\cb3         // --- \uc0\u31616 \u21270 \u30340  SVG \u22270 \u26631 \u32452 \u20214  (\u26367 \u20195  lucide-react \u20197 \u36991 \u20813 \u20381 \u36182 \u38169 \u35823 ) ---\cb1 \
+\cb3         const Icon = (\{ path, size = 24, className = "", fill = "none" \}) => (\cb1 \
+\cb3             <svg \cb1 \
+\cb3                 width=\{size\} \cb1 \
+\cb3                 height=\{size\} \cb1 \
+\cb3                 viewBox="0 0 24 24" \cb1 \
+\cb3                 fill=\{fill\} \cb1 \
+\cb3                 stroke="currentColor" \cb1 \
+\cb3                 strokeWidth="2" \cb1 \
+\cb3                 strokeLinecap="round" \cb1 \
+\cb3                 strokeLinejoin="round" \cb1 \
+\cb3                 className=\{className\}\cb1 \
+\cb3             >\cb1 \
+\cb3                 \{path\}\cb1 \
+\cb3             </svg>\cb1 \
+\cb3         );\cb1 \
+\
+\cb3         const Icons = \{\cb1 \
+\cb3             Zap: (props) => <Icon \{...props\} path=\{<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>\} />,\cb1 \
+\cb3             Flame: (props) => <Icon \{...props\} path=\{<path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.1.2-2.2.5-3.3.3-1.1 1-2.2 2-3.3 1 1.1 2 2.2 2 3.3z"></path>\} />,\cb1 \
+\cb3             Compass: (props) => <Icon \{...props\} path=\{<><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></>\} />,\cb1 \
+\cb3             BarChart3: (props) => <Icon \{...props\} path=\{<><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></>\} />,\cb1 \
+\cb3             Play: (props) => <Icon \{...props\} fill="currentColor" path=\{<polygon points="5 3 19 12 5 21 5 3"></polygon>\} />,\cb1 \
+\cb3             ChevronRight: (props) => <Icon \{...props\} path=\{<polyline points="9 18 15 12 9 6"></polyline>\} />,\cb1 \
+\cb3             Heart: (props) => <Icon \{...props\} path=\{<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>\} />,\cb1 \
+\cb3             Trophy: (props) => <Icon \{...props\} path=\{<><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></>\} />,\cb1 \
+\cb3             Clock: (props) => <Icon \{...props\} path=\{<><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></>\} />,\cb1 \
+\cb3             MapPin: (props) => <Icon \{...props\} path=\{<><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></>\} />,\cb1 \
+\cb3             Calendar: (props) => <Icon \{...props\} path=\{<><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></>\} />,\cb1 \
+\cb3             MoreHorizontal: (props) => <Icon \{...props\} path=\{<><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></>\} />\cb1 \
+\cb3         \};\cb1 \
+\
+\cb3         // --- \uc0\u20027 \u24212 \u29992 \u32452 \u20214  ---\cb1 \
+\cb3         const App = () => \{\cb1 \
+\cb3             const [activeTab, setActiveTab] = useState('plan');\cb1 \
+\cb3             const [scrolled, setScrolled] = useState(false);\cb1 \
+\
+\cb3             const handleScroll = (e) => \{\cb1 \
+\cb3                 if (e.target.scrollTop > 20) \{\cb1 \
+\cb3                     setScrolled(true);\cb1 \
+\cb3                 \} else \{\cb1 \
+\cb3                     setScrolled(false);\cb1 \
+\cb3                 \}\cb1 \
+\cb3             \};\cb1 \
+\
+\cb3             return (\cb1 \
+\cb3                 <div className="relative w-[390px] h-[844px] bg-black rounded-[55px] shadow-2xl overflow-hidden border-[8px] border-gray-900 ring-1 ring-gray-700">\cb1 \
+\cb3                     \cb1 \
+\cb3                     \{/* \uc0\u28789 \u21160 \u23707  */\}\cb1 \
+\cb3                     <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[120px] h-[35px] bg-black rounded-b-[20px] z-50 flex justify-center items-center">\cb1 \
+\cb3                         <div className="w-20 h-4 bg-black rounded-full flex justify-between items-center px-2">\cb1 \
+\cb3                             <div className="w-2 h-2 rounded-full bg-[#1a1a1a]"></div>\cb1 \
+\cb3                             <div className="w-1.5 h-1.5 rounded-full bg-[#0c0c0c] ml-1"></div>\cb1 \
+\cb3                         </div>\cb1 \
+\cb3                     </div>\cb1 \
+\
+\cb3                     \{/* \uc0\u29366 \u24577 \u26639  */\}\cb1 \
+\cb3                     <div className="absolute top-3 left-8 text-white text-xs font-medium z-50">9:41</div>\cb1 \
+\cb3                     <div className="absolute top-3 right-8 flex space-x-1 items-center z-50">\cb1 \
+\cb3                         <div className="text-white text-xs"><Icons.Zap size=\{12\} fill="white" /></div>\cb1 \
+\cb3                     </div>\cb1 \
+\
+\cb3                     \{/* \uc0\u23631 \u24149 \u20869 \u23481  */\}\cb1 \
+\cb3                     <div \cb1 \
+\cb3                         className="w-full h-full bg-[#FAFAFA] overflow-y-auto no-scrollbar relative"\cb1 \
+\cb3                         onScroll=\{handleScroll\}\cb1 \
+\cb3                     >\cb1 \
+\cb3                         \{/* \uc0\u39030 \u37096 \u20809 \u26197 \u35013 \u39280  */\}\cb1 \
+\cb3                         <div className="fixed top-0 left-0 w-full h-[500px] bg-gradient-to-b from-orange-100/50 to-transparent pointer-events-none opacity-60"></div>\cb1 \
+\
+\cb3                         \{/* \uc0\u39030 \u37096  Header */\}\cb1 \
+\cb3                         <header className=\{`fixed top-0 w-full z-40 transition-all duration-300 px-6 pt-14 pb-4 flex justify-between items-center $\{scrolled ? 'bg-white/80 backdrop-blur-md shadow-sm' : 'bg-transparent'\}`\}>\cb1 \
+\cb3                             <div className="flex items-center gap-3">\cb1 \
+\cb3                                 <div className="relative group cursor-pointer transition-transform transform active:scale-95">\cb1 \
+\cb3                                     <div className="w-10 h-10 rounded-full p-[2px] bg-gradient-to-tr from-orange-500 to-red-500">\cb1 \
+\cb3                                         <img \cb1 \
+\cb3                                             src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" \cb1 \
+\cb3                                             alt="User" \cb1 \
+\cb3                                             className="w-full h-full rounded-full object-cover border-2 border-white"\cb1 \
+\cb3                                         />\cb1 \
+\cb3                                     </div>\cb1 \
+\cb3                                     <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-400 border-2 border-white rounded-full"></div>\cb1 \
+\cb3                                 </div>\cb1 \
+\cb3                                 <div className=\{`transition-opacity duration-300 $\{scrolled ? 'opacity-0 w-0 overflow-hidden' : 'opacity-100'\}`\}>\cb1 \
+\cb3                                     <h2 className="text-xs text-gray-500 font-medium uppercase tracking-wider">Welcome back</h2>\cb1 \
+\cb3                                     <h1 className="text-lg font-bold text-gray-800">Sarah</h1>\cb1 \
+\cb3                                 </div>\cb1 \
+\cb3                             </div>\cb1 \
+\cb3                             \cb1 \
+\cb3                             <button className="w-10 h-10 rounded-full bg-white/60 backdrop-blur-sm border border-white shadow-sm flex items-center justify-center text-gray-600 hover:bg-orange-50 transition-colors">\cb1 \
+\cb3                                 <Icons.Calendar size=\{20\} className="text-orange-500" />\cb1 \
+\cb3                             </button>\cb1 \
+\cb3                         </header>\cb1 \
+\
+\cb3                         \{/* \uc0\u36335 \u30001 \u35270 \u22270  */\}\cb1 \
+\cb3                         <div className="pt-28 pb-28 px-0">\cb1 \
+\cb3                             \{activeTab === 'plan' && <PlanView />\}\cb1 \
+\cb3                             \{activeTab === 'discover' && <DiscoverView />\}\cb1 \
+\cb3                             \{activeTab === 'stats' && <StatsView />\}\cb1 \
+\cb3                         </div>\cb1 \
+\cb3                     </div>\cb1 \
+\
+\cb3                     \{/* \uc0\u24213 \u37096 \u23548 \u33322  */\}\cb1 \
+\cb3                     <div className="absolute bottom-6 left-6 right-6 h-16 bg-white/90 backdrop-blur-xl rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-white/50 flex justify-around items-center z-50">\cb1 \
+\cb3                         <NavItem \cb1 \
+\cb3                             icon=\{<Icons.Flame size=\{24\} />\} \cb1 \
+\cb3                             label="\uc0\u35745 \u21010 " \cb1 \
+\cb3                             isActive=\{activeTab === 'plan'\} \cb1 \
+\cb3                             onClick=\{() => setActiveTab('plan')\} \cb1 \
+\cb3                         />\cb1 \
+\cb3                         <NavItem \cb1 \
+\cb3                             icon=\{<Icons.Compass size=\{24\} />\} \cb1 \
+\cb3                             label="\uc0\u21457 \u29616 " \cb1 \
+\cb3                             isActive=\{activeTab === 'discover'\} \cb1 \
+\cb3                             onClick=\{() => setActiveTab('discover')\} \cb1 \
+\cb3                         />\cb1 \
+\cb3                         <NavItem \cb1 \
+\cb3                             icon=\{<Icons.BarChart3 size=\{24\} />\} \cb1 \
+\cb3                             label="\uc0\u25105 \u30340 " \cb1 \
+\cb3                             isActive=\{activeTab === 'stats'\} \cb1 \
+\cb3                             onClick=\{() => setActiveTab('stats')\} \cb1 \
+\cb3                         />\cb1 \
+\cb3                     </div>\cb1 \
+\cb3                     \cb1 \
+\cb3                     \{/* Home Indicator */\}\cb1 \
+\cb3                     <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gray-300 rounded-full z-50"></div>\cb1 \
+\cb3                 </div>\cb1 \
+\cb3             );\cb1 \
+\cb3         \};\cb1 \
+\
+\cb3         const NavItem = (\{ icon, label, isActive, onClick \}) => \{\cb1 \
+\cb3             return (\cb1 \
+\cb3                 <button \cb1 \
+\cb3                     onClick=\{onClick\}\cb1 \
+\cb3                     className=\{`relative flex flex-col items-center justify-center w-14 h-14 transition-all duration-300 $\{isActive ? '-translate-y-3' : 'text-gray-400'\}`\}\cb1 \
+\cb3                 >\cb1 \
+\cb3                     <div className=\{`p-3 rounded-full transition-all duration-300 $\{isActive ? 'bg-gradient-to-tr from-orange-500 to-red-600 text-white shadow-lg shadow-orange-500/30' : 'bg-transparent hover:bg-gray-50'\}`\}>\cb1 \
+\cb3                         \{icon\}\cb1 \
+\cb3                     </div>\cb1 \
+\cb3                     \{isActive && (\cb1 \
+\cb3                         <span className="absolute -bottom-4 text-[10px] font-bold text-gray-800 tracking-wide animate-fade-in">\cb1 \
+\cb3                             \{label\}\cb1 \
+\cb3                         </span>\cb1 \
+\cb3                     )\}\cb1 \
+\cb3                 </button>\cb1 \
+\cb3             );\cb1 \
+\cb3         \};\cb1 \
+\
+\cb3         const PlanView = () => \{\cb1 \
+\cb3             return (\cb1 \
+\cb3                 <div className="animate-slide-up space-y-8">\cb1 \
+\cb3                     <div className="px-6">\cb1 \
+\cb3                         <h1 className="text-3xl font-bold text-gray-900 leading-tight">\cb1 \
+\cb3                             \uc0\u30456 \u20276  <br/>\cb1 \
+\cb3                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">Sweat Today?</span>\cb1 \
+\cb3                         </h1>\cb1 \
+\cb3                         <p className="mt-2 text-gray-500 text-sm">\uc0\u20170 \u22825 \u26377  2 \u20010 \u24453 \u23436 \u25104 \u35745 \u21010 \u12290 </p>\cb1 \
+\cb3                     </div>\cb1 \
+\
+\cb3                     \{/* \uc0\u27178 \u21521 \u28378 \u21160 \u21345 \u29255  */\}\cb1 \
+\cb3                     <div className="relative w-full overflow-x-auto no-scrollbar px-6 pb-4 flex gap-5 snap-x">\cb1 \
+\cb3                         <div className="snap-center shrink-0 w-[280px] h-[360px] relative rounded-[32px] overflow-hidden shadow-[0_20px_40px_-10px_rgba(255,100,50,0.3)] group cursor-pointer">\cb1 \
+\cb3                             <img \cb1 \
+\cb3                                 src="https://images.unsplash.com/photo-1552674605-46d502029328?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" \cb1 \
+\cb3                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"\cb1 \
+\cb3                                 alt="Running"\cb1 \
+\cb3                             />\cb1 \
+\cb3                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>\cb1 \
+\cb3                             <div className="absolute top-5 right-5 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-xs text-white border border-white/20 font-medium">\cb1 \
+\cb3                                 45 min\cb1 \
+\cb3                             </div>\cb1 \
+\cb3                             <div className="absolute bottom-0 left-0 p-6 w-full">\cb1 \
+\cb3                                 <div className="flex items-center gap-2 mb-2">\cb1 \
+\cb3                                     <span className="bg-orange-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-md uppercase tracking-wider">\uc0\u26377 \u27687 </span>\cb1 \
+\cb3                                 </div>\cb1 \
+\cb3                                 <h3 className="text-2xl font-bold text-white mb-1">\uc0\u26085 \u33853 \u24930 \u36305 </h3>\cb1 \
+\cb3                                 <p className="text-gray-300 text-sm line-clamp-2">\uc0\u25552 \u21319 \u32784 \u21147 \u65292 \u37327 \u36523 \u23450 \u21046 \u30340 \u38388 \u27463 \u36305 \u12290 </p>\cb1 \
+\cb3                                 <button className="mt-4 w-12 h-12 rounded-full bg-white text-orange-600 flex items-center justify-center hover:scale-105 transition-transform">\cb1 \
+\cb3                                     <Icons.Play fill="currentColor" size=\{20\} className="ml-1"/>\cb1 \
+\cb3                                 </button>\cb1 \
+\cb3                             </div>\cb1 \
+\cb3                         </div>\cb1 \
+\
+\cb3                         <div className="snap-center shrink-0 w-[280px] h-[360px] relative rounded-[32px] overflow-hidden shadow-xl group cursor-pointer">\cb1 \
+\cb3                             <img \cb1 \
+\cb3                                 src="https://images.unsplash.com/photo-1601422407692-ec4eeec1d9b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" \cb1 \
+\cb3                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"\cb1 \
+\cb3                                 alt="HIIT"\cb1 \
+\cb3                             />\cb1 \
+\cb3                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>\cb1 \
+\cb3                             <div className="absolute top-5 right-5 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-xs text-white border border-white/20 font-medium">\cb1 \
+\cb3                                 20 min\cb1 \
+\cb3                             </div>\cb1 \
+\cb3                             <div className="absolute bottom-0 left-0 p-6 w-full">\cb1 \
+\cb3                                 <div className="flex items-center gap-2 mb-2">\cb1 \
+\cb3                                     <span className="bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-md uppercase tracking-wider">\uc0\u39640 \u24378 \u24230 </span>\cb1 \
+\cb3                                 </div>\cb1 \
+\cb3                                 <h3 className="text-2xl font-bold text-white mb-1">\uc0\u26680 \u24515 \u29123 \u33026 </h3>\cb1 \
+\cb3                                 <p className="text-gray-300 text-sm">\uc0\u39640 \u25928 \u38388 \u27463 \u35757 \u32451 \u12290 </p>\cb1 \
+\cb3                                 <button className="mt-4 w-12 h-12 rounded-full bg-white/90 text-red-600 flex items-center justify-center hover:scale-105 transition-transform">\cb1 \
+\cb3                                     <Icons.Play fill="currentColor" size=\{20\} className="ml-1"/>\cb1 \
+\cb3                                 </button>\cb1 \
+\cb3                             </div>\cb1 \
+\cb3                         </div>\cb1 \
+\cb3                     </div>\cb1 \
+\
+\cb3                     <div className="px-6">\cb1 \
+\cb3                         <div className="flex justify-between items-center mb-4">\cb1 \
+\cb3                             <h3 className="text-lg font-bold text-gray-800">\uc0\u24555 \u25463 \u21160 \u20316 </h3>\cb1 \
+\cb3                             <span className="text-orange-500 text-xs font-semibold">\uc0\u20840 \u37096 </span>\cb1 \
+\cb3                         </div>\cb1 \
+\cb3                         \cb1 \
+\cb3                         <div className="space-y-4">\cb1 \
+\cb3                             <div className="bg-white p-4 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] flex items-center gap-4 hover:shadow-md transition-shadow cursor-pointer border border-gray-100">\cb1 \
+\cb3                                 <div className="w-14 h-14 rounded-xl bg-purple-50 flex items-center justify-center text-purple-500">\cb1 \
+\cb3                                     <Icons.Zap size=\{24\} />\cb1 \
+\cb3                                 </div>\cb1 \
+\cb3                                 <div className="flex-1">\cb1 \
+\cb3                                     <h4 className="font-bold text-gray-800">\uc0\u26216 \u38388 \u25289 \u20280 </h4>\cb1 \
+\cb3                                     <p className="text-xs text-gray-400">\uc0\u26580 \u38887 \u24615  \'95 10 min</p>\cb1 \
+\cb3                                 </div>\cb1 \
+\cb3                                 <div className="w-8 h-8 rounded-full border-2 border-gray-100 flex items-center justify-center">\cb1 \
+\cb3                                     <Icons.ChevronRight size=\{16\} className="text-gray-300" />\cb1 \
+\cb3                                 </div>\cb1 \
+\cb3                             </div>\cb1 \
+\
+\cb3                             <div className="bg-white p-4 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] flex items-center gap-4 hover:shadow-md transition-shadow cursor-pointer border border-gray-100">\cb1 \
+\cb3                                 <div className="w-14 h-14 rounded-xl bg-blue-50 flex items-center justify-center text-blue-500">\cb1 \
+\cb3                                     <Icons.Compass size=\{24\} />\cb1 \
+\cb3                                 </div>\cb1 \
+\cb3                                 <div className="flex-1">\cb1 \
+\cb3                                     <h4 className="font-bold text-gray-800">\uc0\u20901 \u24819 </h4>\cb1 \
+\cb3                                     <p className="text-xs text-gray-400">\uc0\u24515 \u29702 \u20581 \u24247  \'95 15 min</p>\cb1 \
+\cb3                                 </div>\cb1 \
+\cb3                                 <div className="w-8 h-8 rounded-full border-2 border-gray-100 flex items-center justify-center">\cb1 \
+\cb3                                     <Icons.ChevronRight size=\{16\} className="text-gray-300" />\cb1 \
+\cb3                                 </div>\cb1 \
+\cb3                             </div>\cb1 \
+\cb3                         </div>\cb1 \
+\cb3                     </div>\cb1 \
+\cb3                 </div>\cb1 \
+\cb3             );\cb1 \
+\cb3         \};\cb1 \
+\
+\cb3         const DiscoverView = () => \{\cb1 \
+\cb3             return (\cb1 \
+\cb3                 <div className="animate-slide-up space-y-8 px-6">\cb1 \
+\cb3                     <div>\cb1 \
+\cb3                         <h1 className="text-3xl font-bold text-gray-900">\uc0\u25506 \u32034 </h1>\cb1 \
+\cb3                         <p className="text-gray-500 text-sm mt-1">\uc0\u20026 \u24744 \u23450 \u21046 \u30340 \u20581 \u24247 \u28789 \u24863 \u12290 </p>\cb1 \
+\cb3                     </div>\cb1 \
+\
+\cb3                     <div className="relative w-full h-64 rounded-[32px] overflow-hidden shadow-lg group cursor-pointer">\cb1 \
+\cb3                         <img \cb1 \
+\cb3                             src="https://images.unsplash.com/photo-1544367563-12123d8965cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" \cb1 \
+\cb3                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"\cb1 \
+\cb3                             alt="Story"\cb1 \
+\cb3                         />\cb1 \
+\cb3                         <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>\cb1 \
+\cb3                         <div className="absolute top-6 left-6 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-[10px] text-white font-bold uppercase tracking-widest border border-white/10">\cb1 \
+\cb3                             \uc0\u31934 \u36873 \u25925 \u20107 \cb1 \
+\cb3                         </div>\cb1 \
+\cb3                         <div className="absolute bottom-0 left-0 p-8 w-3/4">\cb1 \
+\cb3                             <h2 className="text-2xl font-bold text-white mb-2 leading-tight">"\uc0\u25105 \u26159 \u22914 \u20309 \u22312 40\u23681 \u36305 \u23436 \u39318 \u20010 \u39532 \u25289 \u26494 \u30340 "</h2>\cb1 \
+\cb3                             <div className="flex items-center gap-2">\cb1 \
+\cb3                                 <img src="https://randomuser.me/api/portraits/women/44.jpg" className="w-6 h-6 rounded-full border border-white" />\cb1 \
+\cb3                                 <span className="text-gray-300 text-xs">Elena \uc0\u30340 \u26053 \u31243 </span>\cb1 \
+\cb3                             </div>\cb1 \
+\cb3                         </div>\cb1 \
+\cb3                     </div>\cb1 \
+\
+\cb3                     <div className="grid grid-cols-2 gap-4">\cb1 \
+\cb3                         <div className="bg-orange-50 p-5 rounded-[28px] relative overflow-hidden h-56 flex flex-col justify-between group cursor-pointer hover:bg-orange-100 transition-colors">\cb1 \
+\cb3                             <div className="relative z-10">\cb1 \
+\cb3                                 <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-orange-500 mb-3 shadow-sm">\cb1 \
+\cb3                                     <Icons.Zap size=\{20\} />\cb1 \
+\cb3                                 </div>\cb1 \
+\cb3                                 <h3 className="text-lg font-bold text-gray-900 leading-tight">\uc0\u22686 \u32908 \u31185 \u23398 </h3>\cb1 \
+\cb3                                 <p className="text-xs text-gray-500 mt-1">\uc0\u32908 \u32905 \u29983 \u38271  101</p>\cb1 \
+\cb3                             </div>\cb1 \
+\cb3                             <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-orange-200/50 rounded-full blur-2xl"></div>\cb1 \
+\cb3                             <img \cb1 \
+\cb3                                 src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" \cb1 \
+\cb3                                 className="absolute bottom-4 right-4 w-16 h-16 rounded-xl object-cover shadow-sm transform rotate-6 group-hover:rotate-12 transition-transform" \cb1 \
+\cb3                             />\cb1 \
+\cb3                         </div>\cb1 \
+\
+\cb3                         <div className="bg-green-50 p-5 rounded-[28px] relative overflow-hidden h-56 flex flex-col justify-between group cursor-pointer hover:bg-green-100 transition-colors">\cb1 \
+\cb3                             <div className="relative z-10">\cb1 \
+\cb3                                 <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-green-600 mb-3 shadow-sm">\cb1 \
+\cb3                                     <Icons.Heart size=\{20\} />\cb1 \
+\cb3                                 </div>\cb1 \
+\cb3                                 <h3 className="text-lg font-bold text-gray-900 leading-tight">\uc0\u32431 \u20928 \u39278 \u39135 </h3>\cb1 \
+\cb3                                 <p className="text-xs text-gray-500 mt-1">\uc0\u29275 \u27833 \u26524 \u39135 \u35889 </p>\cb1 \
+\cb3                             </div>\cb1 \
+\cb3                             <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-green-200/50 rounded-full blur-2xl"></div>\cb1 \
+\cb3                             <img \cb1 \
+\cb3                                 src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" \cb1 \
+\cb3                                 className="absolute bottom-4 right-4 w-16 h-16 rounded-xl object-cover shadow-sm transform -rotate-3 group-hover:-rotate-6 transition-transform" \cb1 \
+\cb3                             />\cb1 \
+\cb3                         </div>\cb1 \
+\cb3                     </div>\cb1 \
+\
+\cb3                     <div className="bg-gray-900 rounded-[28px] p-6 text-white relative overflow-hidden">\cb1 \
+\cb3                         <div className="relative z-10 flex justify-between items-center">\cb1 \
+\cb3                             <div>\cb1 \
+\cb3                                 <h3 className="text-lg font-bold">11\uc0\u26376 \u25361 \u25112 </h3>\cb1 \
+\cb3                                 <p className="text-gray-400 text-xs mt-1">\uc0\u24050 \u26377  12,400+ \u20154 \u21152 \u20837 </p>\cb1 \
+\cb3                             </div>\cb1 \
+\cb3                             <button className="bg-orange-500 px-4 py-2 rounded-full text-xs font-bold hover:bg-orange-600 transition-colors">\uc0\u21152 \u20837 </button>\cb1 \
+\cb3                         </div>\cb1 \
+\cb3                         <div className="absolute top-0 right-0 w-full h-full opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>\cb1 \
+\cb3                     </div>\cb1 \
+\cb3                 </div>\cb1 \
+\cb3             );\cb1 \
+\cb3         \};\cb1 \
+\
+\cb3         const StatsView = () => \{\cb1 \
+\cb3             return (\cb1 \
+\cb3                 <div className="animate-slide-up space-y-6 px-6">\cb1 \
+\cb3                     <div className="flex justify-between items-end mb-2">\cb1 \
+\cb3                         <h1 className="text-3xl font-bold text-gray-900">\uc0\u25968 \u25454 \u32479 \u35745 </h1>\cb1 \
+\cb3                         <span className="text-sm font-semibold text-orange-500">\uc0\u21608 \u35270 \u22270 </span>\cb1 \
+\cb3                     </div>\cb1 \
+\
+\cb3                     <div className="bg-white rounded-[40px] p-8 shadow-[0_10px_40px_rgba(0,0,0,0.05)] border border-gray-100 flex flex-col items-center relative">\cb1 \
+\cb3                         <div className="relative w-48 h-48 flex items-center justify-center">\cb1 \
+\cb3                             <svg className="w-full h-full transform -rotate-90">\cb1 \
+\cb3                                 <circle cx="96" cy="96" r="80" stroke="#F3F4F6" strokeWidth="16" fill="transparent" />\cb1 \
+\cb3                                 <circle \cb1 \
+\cb3                                     cx="96" \cb1 \
+\cb3                                     cy="96" \cb1 \
+\cb3                                     r="80" \cb1 \
+\cb3                                     stroke="url(#gradient)" \cb1 \
+\cb3                                     strokeWidth="16" \cb1 \
+\cb3                                     fill="transparent" \cb1 \
+\cb3                                     strokeDasharray="502" \cb1 \
+\cb3                                     strokeDashoffset="120" \cb1 \
+\cb3                                     strokeLinecap="round"\cb1 \
+\cb3                                     className="animate-dash"\cb1 \
+\cb3                                 />\cb1 \
+\cb3                                 <defs>\cb1 \
+\cb3                                     <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">\cb1 \
+\cb3                                         <stop offset="0%" stopColor="#FF8C42" />\cb1 \
+\cb3                                         <stop offset="100%" stopColor="#FF3B30" />\cb1 \
+\cb3                                     </linearGradient>\cb1 \
+\cb3                                 </defs>\cb1 \
+\cb3                             </svg>\cb1 \
+\cb3                             <div className="absolute flex flex-col items-center">\cb1 \
+\cb3                                 <span className="text-4xl font-black text-gray-800 tracking-tighter">75<span className="text-xl font-medium text-gray-400">%</span></span>\cb1 \
+\cb3                                 <span className="text-xs font-bold text-gray-400 uppercase tracking-widest mt-1">\uc0\u20170 \u26085 \u30446 \u26631 </span>\cb1 \
+\cb3                             </div>\cb1 \
+\cb3                         </div>\cb1 \
+\
+\cb3                         <div className="grid grid-cols-3 gap-8 mt-6 w-full">\cb1 \
+\cb3                             <div className="text-center">\cb1 \
+\cb3                                 <p className="text-xs text-gray-400 mb-1">\uc0\u26102 \u38271 </p>\cb1 \
+\cb3                                 <p className="text-lg font-bold text-gray-800">45<span className="text-xs font-normal">m</span></p>\cb1 \
+\cb3                             </div>\cb1 \
+\cb3                             <div className="text-center border-l border-r border-gray-100">\cb1 \
+\cb3                                 <p className="text-xs text-gray-400 mb-1">\uc0\u21315 \u21345 </p>\cb1 \
+\cb3                                 <p className="text-lg font-bold text-gray-800">320</p>\cb1 \
+\cb3                             </div>\cb1 \
+\cb3                             <div className="text-center">\cb1 \
+\cb3                                 <p className="text-xs text-gray-400 mb-1">\uc0\u24515 \u29575 </p>\cb1 \
+\cb3                                 <p className="text-lg font-bold text-gray-800">118</p>\cb1 \
+\cb3                             </div>\cb1 \
+\cb3                         </div>\cb1 \
+\cb3                     </div>\cb1 \
+\
+\cb3                     <div className="grid grid-cols-2 gap-4">\cb1 \
+\cb3                         <div className="bg-orange-500 rounded-[32px] p-6 text-white relative overflow-hidden group">\cb1 \
+\cb3                             <div className="relative z-10">\cb1 \
+\cb3                                 <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mb-4 backdrop-blur-sm">\cb1 \
+\cb3                                     <Icons.Trophy size=\{20\} />\cb1 \
+\cb3                                 </div>\cb1 \
+\cb3                                 <h3 className="text-2xl font-bold">12</h3>\cb1 \
+\cb3                                 <p className="text-sm text-orange-100">\uc0\u25104 \u23601 \u21195 \u31456 </p>\cb1 \
+\cb3                             </div>\cb1 \
+\cb3                             <Icons.Flame size=\{120\} className="absolute -bottom-4 -right-6 text-orange-400/30 transform group-hover:scale-110 transition-transform" />\cb1 \
+\cb3                         </div>\cb1 \
+\
+\cb3                         <div className="bg-gray-100 rounded-[32px] p-6 relative group overflow-hidden">\cb1 \
+\cb3                             <div className="relative z-10">\cb1 \
+\cb3                                 <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm text-gray-600">\cb1 \
+\cb3                                     <Icons.Clock size=\{20\} />\cb1 \
+\cb3                                 </div>\cb1 \
+\cb3                                 <h3 className="text-2xl font-bold text-gray-800">18.5<span className="text-sm font-normal text-gray-500">h</span></h3>\cb1 \
+\cb3                                 <p className="text-sm text-gray-400">\uc0\u24635 \u36816 \u21160 \u26102 \u38271 </p>\cb1 \
+\cb3                             </div>\cb1 \
+\cb3                             <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-200">\cb1 \
+\cb3                                 <div className="w-2/3 h-full bg-gray-400"></div>\cb1 \
+\cb3                             </div>\cb1 \
+\cb3                         </div>\cb1 \
+\cb3                     </div>\cb1 \
+\cb3                     \cb1 \
+\cb3                     <div className="bg-white rounded-[24px] p-5 shadow-sm border border-gray-100">\cb1 \
+\cb3                         <div className="flex justify-between items-center mb-4">\cb1 \
+\cb3                             <h4 className="font-bold text-gray-700">\uc0\u26368 \u36817 \u21160 \u24577 </h4>\cb1 \
+\cb3                             <Icons.MoreHorizontal className="text-gray-300" />\cb1 \
+\cb3                         </div>\cb1 \
+\cb3                         <div className="space-y-3">\cb1 \
+\cb3                             \{[1, 2].map((_, i) => (\cb1 \
+\cb3                                 <div key=\{i\} className="flex items-center justify-between pb-3 border-b border-gray-50 last:border-0 last:pb-0">\cb1 \
+\cb3                                     <div className="flex items-center gap-3">\cb1 \
+\cb3                                         <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center">\cb1 \
+\cb3                                             \{i === 0 ? <Icons.MapPin size=\{16\} className="text-blue-500"/> : <Icons.Flame size=\{16\} className="text-orange-500"/>\}\cb1 \
+\cb3                                         </div>\cb1 \
+\cb3                                         <div>\cb1 \
+\cb3                                             <p className="text-sm font-bold text-gray-800">\{i === 0 ? '\uc0\u25143 \u22806 \u36305 \u27493 ' : '\u26680 \u24515 \u35757 \u32451 '\}</p>\cb1 \
+\cb3                                             <p className="text-[10px] text-gray-400">\uc0\u26152 \u22825 , 18:00</p>\cb1 \
+\cb3                                         </div>\cb1 \
+\cb3                                     </div>\cb1 \
+\cb3                                     <span className="text-sm font-bold text-gray-600">\{i === 0 ? '5.2 km' : '350 kcal'\}</span>\cb1 \
+\cb3                                 </div>\cb1 \
+\cb3                             ))\}\cb1 \
+\cb3                         </div>\cb1 \
+\cb3                     </div>\cb1 \
+\cb3                 </div>\cb1 \
+\cb3             );\cb1 \
+\cb3         \};\cb1 \
+\
+\cb3         const root = ReactDOM.createRoot(document.getElementById('root'));\cb1 \
+\cb3         root.render(<App />);\cb1 \
+\cb3     \cf6 \strokec6 </\cf2 \strokec2 script\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb3 \strokec6 </\cf2 \strokec2 body\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6 </\cf2 \strokec2 html\cf6 \strokec6 >\cf5 \cb1 \strokec5 \
+}

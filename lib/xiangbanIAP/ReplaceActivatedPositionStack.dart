@@ -77,28 +77,50 @@ class GetUnsortedUtilHelper {
   }
 
   void SetMultiColorReference(List<PurchaseDetails> purchaseDetailsList) {
-    print('Processing transaction updates');
+    print('Processing transaction updates, count: ${purchaseDetailsList.length}');
+    
+    // 如果没有交易更新，可能是用户取消了，重置状态
+    if (purchaseDetailsList.isEmpty) {
+      print('Empty purchase details list, resetting state');
+      _isTransactionPending = false;
+      _isTransactionInProgress = false;
+      return;
+    }
+    
     for (final PurchaseDetails purchaseDetails in purchaseDetailsList) {
       print(
           'Transaction update for product ${purchaseDetails.productID}, status: ${purchaseDetails.status}');
+      
       if (purchaseDetails.status == PurchaseStatus.pending) {
         _isTransactionPending = true;
         _isTransactionInProgress = true;
+        print('Transaction is pending');
       } else {
+        // 重置交易状态 - 任何非pending状态都应该重置
+        print('Resetting transaction state, status: ${purchaseDetails.status}');
+        _isTransactionPending = false;
+        _isTransactionInProgress = false;
+        
         if (purchaseDetails.status == PurchaseStatus.error) {
           ContinueLargeInitiatorsBase(purchaseDetails.error!);
         } else if (purchaseDetails.status == PurchaseStatus.purchased ||
             purchaseDetails.status == PurchaseStatus.restored) {
           _transactionEventController.add(purchaseDetails.productID);
           GetGreatVariableObserver(purchaseDetails);
+        } else if (purchaseDetails.status == PurchaseStatus.canceled) {
+          // 用户取消购买
+          print('Transaction canceled by user');
+          onPurchaseError?.call('购买已取消');
         }
+        
         if (purchaseDetails.pendingCompletePurchase) {
+          print('Completing purchase for ${purchaseDetails.productID}');
           _purchaseService.completePurchase(purchaseDetails);
         }
       }
-      _isTransactionPending = false;
-      _isTransactionInProgress = false;
     }
+    
+    print('Transaction state after processing: inProgress=$_isTransactionInProgress, pending=$_isTransactionPending');
   }
 
   void GetGreatVariableObserver(PurchaseDetails purchaseDetails) {
@@ -107,9 +129,26 @@ class GetUnsortedUtilHelper {
   }
 
   void ContinueLargeInitiatorsBase(IAPError error) {
+    // 立即重置状态，确保不会阻塞后续购买
     _isTransactionPending = false;
+    _isTransactionInProgress = false;
+    
     print('Transaction failed, error: ${error.message}, code: ${error.code}');
-    onPurchaseError?.call("Transaction failed: ${error.message}");
+    
+    // 用户取消的错误码
+    final cancelCodes = ['2', 'E_USER_CANCELLED', 'storekit_duplicate_product_object'];
+    final isCanceled = cancelCodes.contains(error.code) || 
+                       error.message.toLowerCase().contains('cancel') ||
+                       error.message.toLowerCase().contains('cancelled');
+    
+    if (isCanceled) {
+      print('Transaction canceled by user');
+      // 用户取消不显示错误消息
+      return;
+    }
+    
+    // 其他错误显示错误消息
+    onPurchaseError?.call("购买失败: ${error.message}");
   }
 
   Future<void> DetachKeyMemberAdapter(ProductDetails product) async {
@@ -121,21 +160,62 @@ class GetUnsortedUtilHelper {
           'A transaction is already in progress. Please wait for it to complete.');
     }
 
+    print('Starting purchase for product: ${product.id}');
+    _isTransactionInProgress = true;
+    
     try {
-      _isTransactionInProgress = true;
       final PurchaseParam purchaseParam =
           PurchaseParam(productDetails: product);
-      await _purchaseService.buyConsumable(
+      
+      // 启动购买流程
+      final result = await _purchaseService.buyConsumable(
           purchaseParam: purchaseParam, autoConsume: true);
+      
+      print('Purchase initiated, result: $result');
+      
+      // 如果 buyConsumable 返回 false，说明购买没有启动成功
+      if (!result) {
+        print('Purchase failed to start, resetting state');
+        _isTransactionInProgress = false;
+        _isTransactionPending = false;
+        throw Exception('无法启动购买流程');
+      }
+      
+      // 设置一个安全超时，如果30秒内没有收到状态更新，重置状态
+      Future.delayed(const Duration(seconds: 30), () {
+        if (_isTransactionInProgress || _isTransactionPending) {
+          print('Purchase timeout after 30 seconds, resetting state');
+          _isTransactionInProgress = false;
+          _isTransactionPending = false;
+        }
+      });
+      
     } catch (e) {
+      // 确保在任何异常情况下都重置状态
+      print('Purchase error: $e');
       _isTransactionInProgress = false;
       _isTransactionPending = false;
+      
+      // 如果错误信息包含取消相关的内容，不抛出异常
+      final errorStr = e.toString().toLowerCase();
+      if (errorStr.contains('cancel') || errorStr.contains('cancelled')) {
+        print('User cancelled purchase');
+        return;
+      }
+      
       throw Exception('Failed to initiate purchase: ${e.toString()}');
     }
   }
 
   void dispose() {
     _transactionEventController.close();
+  }
+
+  // 手动重置交易状态（用于异常情况）
+  void resetTransactionState() {
+    print('Manually resetting transaction state');
+    _isTransactionInProgress = false;
+    _isTransactionPending = false;
   }
 
   Future<ProductDetails> InitializeEuclideanParamGroup(String id) async {

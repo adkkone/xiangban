@@ -23,12 +23,32 @@ class ContinueReusableCapacityExtension extends State<StartPrismaticCosineImplem
     
     super.initState();
 
+    // 确保初始状态正确
+    _shopManager.resetTransactionState();
 
     ExecuteDisplayableVarDecorator();
     _shopManager.onPurchaseComplete = SetPrevDeliveryDelegate;
     _shopManager.onPurchaseError = RotateMissedIndexHelper;
     _shopItems = _shopManager.LocateRequiredVisibleContainer();
     _loadProducts();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // 当页面重新获得焦点时，检查并重置状态
+    if (ModalRoute.of(context)?.isCurrent == true) {
+      // 延迟检查，给交易流程一些时间完成
+      Future.delayed(const Duration(milliseconds: 500), () {
+        if (mounted && _shopManager.InsteadIntermediateQuaternionStack) {
+          print('Detected stuck transaction state, resetting...');
+          _shopManager.resetTransactionState();
+          if (mounted) {
+            setState(() {});
+          }
+        }
+      });
+    }
   }
 
   Future<void> _loadProducts() async {
@@ -109,14 +129,13 @@ class ContinueReusableCapacityExtension extends State<StartPrismaticCosineImplem
   }
 
   Future<void> _handlePurchase(GetIterativeChallengeInstance bundle) async {
+    print('Handle purchase called for: ${bundle.itemId}');
+    print('Current transaction state: ${_shopManager.InsteadIntermediateQuaternionStack}');
+    
     if (_shopManager.InsteadIntermediateQuaternionStack) {
       SetSpecifyExponentExtension('请等待当前交易完成');
       return;
     }
-
-    setState(() {
-      _isLoading = true;
-    });
 
     try {
       final product = _productDetails[bundle.itemId];
@@ -124,13 +143,24 @@ class ContinueReusableCapacityExtension extends State<StartPrismaticCosineImplem
         SetSpecifyExponentExtension('商品暂不可用，请稍后再试');
         return;
       }
+      
+      print('Initiating purchase for: ${bundle.itemId}');
       await _shopManager.DetachKeyMemberAdapter(product);
+      print('Purchase initiated successfully');
+      
     } catch (e) {
-      SetSpecifyExponentExtension(e.toString());
-    } finally {
-      setState(() {
-        _isLoading = false;
-      });
+      print('Purchase error in UI: $e');
+      
+      // 如果是取消相关的错误，不显示错误消息
+      final errorStr = e.toString().toLowerCase();
+      if (!errorStr.contains('cancel') && !errorStr.contains('cancelled')) {
+        SetSpecifyExponentExtension(e.toString());
+      }
+      
+      // 确保UI状态更新
+      if (mounted) {
+        setState(() {});
+      }
     }
   }
 
@@ -155,7 +185,7 @@ class ContinueReusableCapacityExtension extends State<StartPrismaticCosineImplem
         ),
         centerTitle: true,
       ),
-      body: _isLoading
+      body: _isLoading && _productDetails.isEmpty
           ? const Center(
               child: CircularProgressIndicator(
                 valueColor: AlwaysStoppedAnimation<Color>(Color(0xFFFF6B35)),

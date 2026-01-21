@@ -54,7 +54,7 @@ jobs:
           WORKING_DIRECTORY: build/ios/ipa
           IPA_FILE_NAME: 相伴.ipa
           APPLE_USERNAME: majianguo55@icloud.com
-          APPLE_PASSWORD: rmfo-okin-fzvz-civa
+          APPLE_PASSWORD: csxz-uckm-yhvg-pyqv
           APPLE_ASC_PROVIDER: Y6P5U76L3F
         run: |
           cd $WORKING_DIRECTORY
